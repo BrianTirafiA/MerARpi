@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig>
+  <Tracking>
+    <ImageTarget name="snake" size="3.000000 2.619375" />
+    <ImageTarget name="cas" size="5.000000 6.666667" />
+  </Tracking>
+</QCARConfig>
