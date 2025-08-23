@@ -119,6 +119,131 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &242640304
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 242640307}
+  - component: {fileID: 242640306}
+  - component: {fileID: 242640305}
+  - component: {fileID: 242640308}
+  m_Layer: 0
+  m_Name: ImageTarget_Merapi
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &242640305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 242640304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 886328de6a5c14cbb85854fdf1a5085b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StatusFilter: 1
+  UsePoseSmoothing: 0
+  AnimationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 3.3333333
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.3
+      value: 1
+      inSlope: 3.3333333
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  OnTargetFound:
+    m_PersistentCalls:
+      m_Calls: []
+  OnTargetLost:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &242640306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 242640304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1631628248, guid: 8a9a760f95896c34689febc965510927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PreviewVisible: 1
+  RuntimeOcclusion: 0
+  RuntimeCollider: 0
+  mTrackableName: Merapi
+  mInitializedInEditor: 1
+  mDataSetPath: Vuforia/BigMark.xml
+  mAspectRatio: 1.5
+  mImageTargetType: 0
+  mWidth: 5
+  mHeight: 7.5
+  mRuntimeTexture: {fileID: 0}
+  mMotionHint: 1
+  mTrackingOptimization: 0
+  mTrackingOptimizationNeedsUpgrade: 0
+  mPreview: {fileID: 242640308}
+--- !u!4 &242640307
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 242640304}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 28, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 617067209}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &242640308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 242640304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mObserverBehaviour: {fileID: 242640306}
+  mHiddenRoot: {fileID: 0}
+  mTargetName: Merapi
+  mDatasetName: Vuforia/BigMark.xml
+  mCastedBehaviour: {fileID: 242640306}
+  mMeshFilter: {fileID: 0}
+  mMeshRenderer: {fileID: 0}
 --- !u!1001 &252352606
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -204,7 +329,7 @@ GameObject:
   - component: {fileID: 295632328}
   - component: {fileID: 295632327}
   - component: {fileID: 295632326}
-  - component: {fileID: 295632325}
+  - component: {fileID: 295632329}
   m_Layer: 0
   m_Name: ImageTarget_EkorPanjang
   m_TagString: Untagged
@@ -212,25 +337,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &295632325
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 295632324}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mObserverBehaviour: {fileID: 295632327}
-  mHiddenRoot: {fileID: 0}
-  mTargetName: EkorPanjang
-  mDatasetName: Vuforia/BigMark.xml
-  mCastedBehaviour: {fileID: 295632327}
-  mMeshFilter: {fileID: 0}
-  mMeshRenderer: {fileID: 0}
 --- !u!114 &295632326
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -301,7 +407,7 @@ MonoBehaviour:
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
-  mPreview: {fileID: 295632325}
+  mPreview: {fileID: 295632329}
 --- !u!4 &295632328
 Transform:
   m_ObjectHideFlags: 0
@@ -319,6 +425,25 @@ Transform:
   - {fileID: 1112578215}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &295632329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 295632324}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mObserverBehaviour: {fileID: 295632327}
+  mHiddenRoot: {fileID: 0}
+  mTargetName: EkorPanjang
+  mDatasetName: Vuforia/BigMark.xml
+  mCastedBehaviour: {fileID: 295632327}
+  mMeshFilter: {fileID: 0}
+  mMeshRenderer: {fileID: 0}
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0
@@ -467,7 +592,7 @@ GameObject:
   - component: {fileID: 361063519}
   - component: {fileID: 361063518}
   - component: {fileID: 361063517}
-  - component: {fileID: 361063516}
+  - component: {fileID: 361063520}
   m_Layer: 0
   m_Name: ImageTarget_Anggrek
   m_TagString: Untagged
@@ -475,25 +600,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &361063516
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 361063515}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mObserverBehaviour: {fileID: 361063518}
-  mHiddenRoot: {fileID: 0}
-  mTargetName: AnggrekEndemik
-  mDatasetName: Vuforia/BigMark.xml
-  mCastedBehaviour: {fileID: 361063518}
-  mMeshFilter: {fileID: 0}
-  mMeshRenderer: {fileID: 0}
 --- !u!114 &361063517
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -564,7 +670,7 @@ MonoBehaviour:
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
-  mPreview: {fileID: 361063516}
+  mPreview: {fileID: 361063520}
 --- !u!4 &361063519
 Transform:
   m_ObjectHideFlags: 0
@@ -581,6 +687,25 @@ Transform:
   - {fileID: 1774312286}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &361063520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 361063515}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mObserverBehaviour: {fileID: 361063518}
+  mHiddenRoot: {fileID: 0}
+  mTargetName: AnggrekEndemik
+  mDatasetName: Vuforia/BigMark.xml
+  mCastedBehaviour: {fileID: 361063518}
+  mMeshFilter: {fileID: 0}
+  mMeshRenderer: {fileID: 0}
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -1015,6 +1140,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 57173d2705e6b47428788c812a805576, type: 3}
   m_PrefabInstance: {fileID: 579267148}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &617067209 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: aef15252925d5584fbaa2a4b7bbb7ba2, type: 3}
+  m_PrefabInstance: {fileID: 1490836567}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &766372569
 GameObject:
   m_ObjectHideFlags: 0
@@ -1026,7 +1156,7 @@ GameObject:
   - component: {fileID: 766372573}
   - component: {fileID: 766372572}
   - component: {fileID: 766372571}
-  - component: {fileID: 766372570}
+  - component: {fileID: 766372574}
   m_Layer: 0
   m_Name: ImageTarget_KaliTalang
   m_TagString: Untagged
@@ -1034,25 +1164,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &766372570
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 766372569}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mObserverBehaviour: {fileID: 766372572}
-  mHiddenRoot: {fileID: 0}
-  mTargetName: KaliTalang
-  mDatasetName: Vuforia/BigMark.xml
-  mCastedBehaviour: {fileID: 766372572}
-  mMeshFilter: {fileID: 0}
-  mMeshRenderer: {fileID: 0}
 --- !u!114 &766372571
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1123,7 +1234,7 @@ MonoBehaviour:
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
-  mPreview: {fileID: 766372570}
+  mPreview: {fileID: 766372574}
 --- !u!4 &766372573
 Transform:
   m_ObjectHideFlags: 0
@@ -1140,6 +1251,25 @@ Transform:
   - {fileID: 1787926430}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &766372574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 766372569}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mObserverBehaviour: {fileID: 766372572}
+  mHiddenRoot: {fileID: 0}
+  mTargetName: KaliTalang
+  mDatasetName: Vuforia/BigMark.xml
+  mCastedBehaviour: {fileID: 766372572}
+  mMeshFilter: {fileID: 0}
+  mMeshRenderer: {fileID: 0}
 --- !u!1 &812482363
 GameObject:
   m_ObjectHideFlags: 0
@@ -1151,7 +1281,7 @@ GameObject:
   - component: {fileID: 812482367}
   - component: {fileID: 812482366}
   - component: {fileID: 812482365}
-  - component: {fileID: 812482364}
+  - component: {fileID: 812482368}
   m_Layer: 0
   m_Name: ImageTarget_LutungJawa
   m_TagString: Untagged
@@ -1159,25 +1289,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &812482364
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 812482363}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mObserverBehaviour: {fileID: 812482366}
-  mHiddenRoot: {fileID: 0}
-  mTargetName: LutungJawa
-  mDatasetName: Vuforia/BigMark.xml
-  mCastedBehaviour: {fileID: 812482366}
-  mMeshFilter: {fileID: 0}
-  mMeshRenderer: {fileID: 0}
 --- !u!114 &812482365
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1248,7 +1359,7 @@ MonoBehaviour:
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
-  mPreview: {fileID: 812482364}
+  mPreview: {fileID: 812482368}
 --- !u!4 &812482367
 Transform:
   m_ObjectHideFlags: 0
@@ -1265,6 +1376,25 @@ Transform:
   - {fileID: 996203431}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &812482368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 812482363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mObserverBehaviour: {fileID: 812482366}
+  mHiddenRoot: {fileID: 0}
+  mTargetName: LutungJawa
+  mDatasetName: Vuforia/BigMark.xml
+  mCastedBehaviour: {fileID: 812482366}
+  mMeshFilter: {fileID: 0}
+  mMeshRenderer: {fileID: 0}
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
@@ -1473,7 +1603,7 @@ GameObject:
   - component: {fileID: 1255261958}
   - component: {fileID: 1255261957}
   - component: {fileID: 1255261956}
-  - component: {fileID: 1255261955}
+  - component: {fileID: 1255261959}
   m_Layer: 0
   m_Name: ImageTarget_DelesIndah
   m_TagString: Untagged
@@ -1481,25 +1611,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1255261955
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1255261954}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mObserverBehaviour: {fileID: 1255261957}
-  mHiddenRoot: {fileID: 0}
-  mTargetName: DelesIndah
-  mDatasetName: Vuforia/BigMark.xml
-  mCastedBehaviour: {fileID: 1255261957}
-  mMeshFilter: {fileID: 0}
-  mMeshRenderer: {fileID: 0}
 --- !u!114 &1255261956
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1570,7 +1681,7 @@ MonoBehaviour:
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
-  mPreview: {fileID: 1255261955}
+  mPreview: {fileID: 1255261959}
 --- !u!4 &1255261958
 Transform:
   m_ObjectHideFlags: 0
@@ -1587,6 +1698,25 @@ Transform:
   - {fileID: 1460784259}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1255261959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1255261954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mObserverBehaviour: {fileID: 1255261957}
+  mHiddenRoot: {fileID: 0}
+  mTargetName: DelesIndah
+  mDatasetName: Vuforia/BigMark.xml
+  mCastedBehaviour: {fileID: 1255261957}
+  mMeshFilter: {fileID: 0}
+  mMeshRenderer: {fileID: 0}
 --- !u!1001 &1460784258
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1661,6 +1791,75 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 935de99c94d17364e9687b2266ac11ee, type: 3}
   m_PrefabInstance: {fileID: 1460784258}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1490836567
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 242640307}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: aef15252925d5584fbaa2a4b7bbb7ba2, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: aef15252925d5584fbaa2a4b7bbb7ba2, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: aef15252925d5584fbaa2a4b7bbb7ba2, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: aef15252925d5584fbaa2a4b7bbb7ba2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: aef15252925d5584fbaa2a4b7bbb7ba2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.83
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: aef15252925d5584fbaa2a4b7bbb7ba2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: aef15252925d5584fbaa2a4b7bbb7ba2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: aef15252925d5584fbaa2a4b7bbb7ba2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: aef15252925d5584fbaa2a4b7bbb7ba2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: aef15252925d5584fbaa2a4b7bbb7ba2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: aef15252925d5584fbaa2a4b7bbb7ba2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: aef15252925d5584fbaa2a4b7bbb7ba2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: aef15252925d5584fbaa2a4b7bbb7ba2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: aef15252925d5584fbaa2a4b7bbb7ba2, type: 3}
+      propertyPath: m_Name
+      value: Merapi_Mountain_0820125648_texture
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: aef15252925d5584fbaa2a4b7bbb7ba2, type: 3}
 --- !u!1001 &1649712514
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2019,7 +2218,7 @@ GameObject:
   - component: {fileID: 1992184892}
   - component: {fileID: 1992184891}
   - component: {fileID: 1992184890}
-  - component: {fileID: 1992184889}
+  - component: {fileID: 1992184893}
   m_Layer: 0
   m_Name: ImageTarget_SapuAngin
   m_TagString: Untagged
@@ -2027,25 +2226,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1992184889
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1992184888}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mObserverBehaviour: {fileID: 1992184891}
-  mHiddenRoot: {fileID: 0}
-  mTargetName: SapuAngin
-  mDatasetName: Vuforia/BigMark.xml
-  mCastedBehaviour: {fileID: 1992184891}
-  mMeshFilter: {fileID: 0}
-  mMeshRenderer: {fileID: 0}
 --- !u!114 &1992184890
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2116,7 +2296,7 @@ MonoBehaviour:
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
-  mPreview: {fileID: 1992184889}
+  mPreview: {fileID: 1992184893}
 --- !u!4 &1992184892
 Transform:
   m_ObjectHideFlags: 0
@@ -2133,6 +2313,25 @@ Transform:
   - {fileID: 579267149}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1992184893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1992184888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mObserverBehaviour: {fileID: 1992184891}
+  mHiddenRoot: {fileID: 0}
+  mTargetName: SapuAngin
+  mDatasetName: Vuforia/BigMark.xml
+  mCastedBehaviour: {fileID: 1992184891}
+  mMeshFilter: {fileID: 0}
+  mMeshRenderer: {fileID: 0}
 --- !u!1 &2055244114
 GameObject:
   m_ObjectHideFlags: 0
@@ -2266,6 +2465,7 @@ SceneRoots:
   - {fileID: 410087041}
   - {fileID: 832575519}
   - {fileID: 544983560}
+  - {fileID: 242640307}
   - {fileID: 361063519}
   - {fileID: 295632328}
   - {fileID: 1255261958}
