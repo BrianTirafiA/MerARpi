@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QCARConfig>
   <Tracking>
+    <ImageTarget name="Merapi" size="5.000000 7.500000" />
     <ImageTarget name="AnggrekEndemik" size="5.000000 7.500000" />
     <ImageTarget name="EkorPanjang" size="5.000000 7.500000" />
     <ImageTarget name="LutungJawa" size="5.000000 7.500000" />
