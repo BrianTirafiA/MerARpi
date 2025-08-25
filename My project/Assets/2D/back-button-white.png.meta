@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 26c1da84436bee949a3007ed75aae036
+guid: ef1bed4b050abb948935a147f4bc7140
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,12 +110,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: button_english_0
+      name: back-button-white_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 40
         y: 0
-        width: 350
+        width: 50
         height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -125,8 +125,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6c58b5e44610999479d662901d8c8895
-      internalID: -1275176160
+      spriteID: 2c0cb41019fdf014cbd4e342918783d9
+      internalID: -1196163378
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 78b8fd6c66943b848a62d0283aaff1d0
+    spriteID: c701d88ad919bbe42a009325e9a2f7c3
     internalID: 0
     vertices: []
     indices: 
@@ -145,7 +145,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      button_english_0: -1275176160
+      back-button-white_0: -1196163378
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
