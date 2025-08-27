@@ -6,8 +6,29 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/LoadingScene.unity
+    guid: 89ef7282d64e142488855ce343f6bc61
+  - enabled: 1
+    path: Assets/Scenes/LanguageScene.unity
+    guid: 4e21e2fc3cb619042bd42b55dc1a75fc
+  - enabled: 1
+    path: Assets/Scenes/English/ENOnBoarding.unity
+    guid: 574de69a928026d4cb3c2379286585fe
+  - enabled: 1
     path: Assets/Scenes/English/EnHomeScene.unity
     guid: 515389ff973bd1c45ac823924f243f44
+  - enabled: 1
+    path: Assets/Scenes/English/EnCameraScene.unity
+    guid: 0a43bc71a859e044c8876b1acbc536cb
+  - enabled: 1
+    path: Assets/Scenes/Indonesia/IdOnBoarding.unity
+    guid: 0b8fb6309c104fb4eb7d1348ad39d836
+  - enabled: 1
+    path: Assets/Scenes/Indonesia/IdHomeScene.unity
+    guid: fd3a4c1dffee8bc4aae9a6a9871f66b4
+  - enabled: 1
+    path: Assets/Scenes/Indonesia/IdCameraScene.unity
+    guid: 0a28af28e84ecf141b3e7bb86796eda3
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
