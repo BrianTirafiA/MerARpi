@@ -4,6 +4,7 @@ using UnityEngine.UI;
 public class OnboardingManager : MonoBehaviour
 {
     public GameObject[] pages;
+    public Animator pageAnimator;
     public Button selanjutnyaButton;
     public Button mulaiSekarangButton;
     //public Animator dotAnimator;
@@ -24,7 +25,6 @@ public class OnboardingManager : MonoBehaviour
         selanjutnyaButton.gameObject.SetActive(true);
         mulaiSekarangButton.gameObject.SetActive(false);
         selanjutnyaButton.onClick.AddListener(GoToNextPage);
-        //dotAnimator.SetInteger("PageIndex", 0);
     }
 
     public void GoToNextPage()
@@ -35,7 +35,7 @@ public class OnboardingManager : MonoBehaviour
         if (currentPageIndex < pages.Length)
         {
             pages[currentPageIndex].SetActive(true);
-            //dotAnimator.SetInteger("PageIndex", 1);
+            pageAnimator.SetTrigger("Next");
         }
 
         if (currentPageIndex == pages.Length - 1)
