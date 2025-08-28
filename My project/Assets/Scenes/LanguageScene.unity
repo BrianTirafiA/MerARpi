@@ -128,7 +128,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5502649}
-  - component: {fileID: 5502648}
+  - component: {fileID: 5502650}
   m_Layer: 0
   m_Name: SceneController
   m_TagString: Untagged
@@ -136,22 +136,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &5502648
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5502647}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f8f67a5a00fae24582b67c63dc5aceb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Load1: IdOnBoarding
-  Load2: ENOnBoarding
-  pageAnimator: {fileID: 1515439027}
-  transitionTime: 2
 --- !u!4 &5502649
 Transform:
   m_ObjectHideFlags: 0
@@ -167,6 +151,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5502650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5502647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b39962f9f24d544f864394c148ad61e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Load1: OnBoarding
+  Load2: OnBoarding
+  Indonesia_id: ID
+  English_id: EN
+  pageAnimator: {fileID: 1515439027}
+  transitionTime: 2
 --- !u!1 &132526802
 GameObject:
   m_ObjectHideFlags: 0
@@ -1001,7 +1003,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Choose your languange
+  m_text: Choose your language
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d224d67abd4f3d64eae661dd75f6e949, type: 2}
   m_sharedMaterial: {fileID: 7038965984587874835, guid: d224d67abd4f3d64eae661dd75f6e949, type: 2}
@@ -1176,8 +1178,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5502648}
-        m_TargetAssemblyTypeName: ButtonLoader, Assembly-CSharp
+      - m_Target: {fileID: 5502650}
+        m_TargetAssemblyTypeName: ChoosingLang, Assembly-CSharp
         m_MethodName: Load1Scene
         m_Mode: 1
         m_Arguments:
@@ -1322,8 +1324,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5502648}
-        m_TargetAssemblyTypeName: ButtonLoader, Assembly-CSharp
+      - m_Target: {fileID: 5502650}
+        m_TargetAssemblyTypeName: ChoosingLang, Assembly-CSharp
         m_MethodName: Load2Scene
         m_Mode: 1
         m_Arguments:

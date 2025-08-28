@@ -1,0 +1,20 @@
+{
+  "items": [
+  { "key": "OnBoarding1_Title", "value": "Kenali Kawasan" },
+  { "key": "OnBoarding1_subtitle", "value": "Kenali Objek Menarik di Taman Nasional\nGunung Merapi dengan meARpi" },
+  { "key": "OnBoarding2_Title", "value": "Temukan favoritmu" },
+  { "key": "OnBoarding2_subtitle", "value": "Temukan  objek favorit menggunakan\nfitur AR dari meARpi" },
+  { "key": "OnBoarding3_Title", "value": "Pengalaman  AR" },
+  { "key": "OnBoarding3_subtitle", "value": "Rasakan pengalaman melalui\naugmented reality bersama meARpi" },
+  { "key": "OnBoardingBtn1", "value": "Selanjutnya" },
+  { "key": "OnBoardingBtn2", "value": "Mulai Sekarang!" },
+  { "key": "HomeTitle", "value": "Selamat Datang" },
+  { "key": "HomeSubtitle", "value": "Jelajahi keajaiban Merapi melalui augmented\nreality. Ayo mulai petualanganmu!" },
+  { "key": "LabelTitle", "value": "Konten" },
+  { "key": "MarkTitle", "value": "Scan Marker" },
+  { "key": "CardTitle", "value": "Scan Card" },
+  { "key": "MarkBtn", "value": "Mulai" },
+  { "key": "CardBtn", "value": "Mulai" },
+  { "key": "Info", "value": "Informasi" }
+  ]
+}

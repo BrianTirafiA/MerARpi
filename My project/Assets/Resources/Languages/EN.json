@@ -1,0 +1,20 @@
+{
+  "items": [
+  { "key": "OnBoarding1_Title", "value": "Get to know the area" },
+  { "key": "OnBoarding1_subtitle", "value": "Discover interesting objects in Mount\nMerapi National Park with meARpi" },
+  { "key": "OnBoarding2_Title", "value": "Find your favorite" },
+  { "key": "OnBoarding2_subtitle", "value": "Find your favorite spots or objects in the\nnational park using meARpi’s AR" },
+  { "key": "OnBoarding3_Title", "value": "Enjoy the AR" },
+  { "key": "OnBoarding3_subtitle", "value": "Enjoy an interactive and educational\naugmented reality with meARpi" },
+  { "key": "OnBoardingBtn1", "value": "Next" },
+  { "key": "OnBoardingBtn2", "value": "Start!" },
+  { "key": "HomeTitle", "value": "Welcome" },
+  { "key": "HomeSubtitle", "value": "Explore Merapi’s wonders through augmented \nreality. Let’s begin your journey!" },
+  { "key": "LabelTitle", "value": "Contents" },
+  { "key": "MarkTitle", "value": "Scan Marker" },
+  { "key": "CardTitle", "value": "Scan Card" },
+  { "key": "MarkBtn", "value": "Start" },
+  { "key": "CardBtn", "value": "Start" },
+  { "key": "Info", "value": "Information" }
+  ]
+}
