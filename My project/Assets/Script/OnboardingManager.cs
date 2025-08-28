@@ -5,6 +5,7 @@ public class OnboardingManager : MonoBehaviour
 {
     public GameObject[] pages;
     public Animator pageAnimator;
+    public Animator PanelAnimator;
     public Button selanjutnyaButton;
     public Button mulaiSekarangButton;
     //public Animator dotAnimator;
@@ -12,7 +13,7 @@ public class OnboardingManager : MonoBehaviour
 
     void Start()
     {
-        for (int i = 0; i < pages.Length; i++)
+/*        for (int i = 0; i < pages.Length; i++)
         {
             pages[i].SetActive(false);
         }
@@ -20,7 +21,7 @@ public class OnboardingManager : MonoBehaviour
         if (pages.Length > 0)
         {
             pages[0].SetActive(true);
-        }
+        }*/
 
         selanjutnyaButton.gameObject.SetActive(true);
         mulaiSekarangButton.gameObject.SetActive(false);
@@ -29,13 +30,14 @@ public class OnboardingManager : MonoBehaviour
 
     public void GoToNextPage()
     {
-        pages[currentPageIndex].SetActive(false);
+        //pages[currentPageIndex].SetActive(false);
         currentPageIndex++;
 
         if (currentPageIndex < pages.Length)
         {
-            pages[currentPageIndex].SetActive(true);
+            //pages[currentPageIndex].SetActive(true);
             pageAnimator.SetTrigger("Next");
+            PanelAnimator.SetTrigger("Next");
         }
 
         if (currentPageIndex == pages.Length - 1)
