@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig>
+  <Tracking>
+    <ImageTarget name="maketdi" size="3.000000 3.000000" />
+    <ImageTarget name="maketbk" size="3.000000 3.000000" />
+    <ImageTarget name="maketsa" size="3.000000 3.000000" />
+    <ImageTarget name="maketjp" size="3.000000 3.000000" />
+    <ImageTarget name="makettm" size="3.000000 3.000000" />
+    <ImageTarget name="MaketGM" size="3.000000 3.000000" />
+    <ImageTarget name="Plunyon" size="3.000000 3.000000" />
+    <ImageTarget name="EkorPanjang" size="3.000000 3.000000" />
+    <ImageTarget name="DelesIndah" size="3.000000 3.000000" />
+    <ImageTarget name="KaliTalang" size="3.000000 3.000000" />
+    <ImageTarget name="SapuAngin" size="3.000000 3.000000" />
+    <ImageTarget name="AnggrekEndemik" size="3.000000 3.000000" />
+    <ImageTarget name="LutungJawa" size="3.000000 3.000000" />
+    <ImageTarget name="TlogoMuncar" size="3.000000 3.000000" />
+    <ImageTarget name="Merapi" size="3.000000 3.000000" />
+  </Tracking>
+</QCARConfig>
