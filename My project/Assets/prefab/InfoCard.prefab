@@ -1462,9 +1462,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scrollbar: {fileID: 4228786538419284517}
   audioLocalizationKeys:
-  - title_GM
-  - brief_GM
-  - data_GM
+  - model_
+  - title_
+  - brief_
+  - data_
   audioSource: {fileID: 2121047016231823916}
 --- !u!1 &4228786538419284517
 GameObject:

@@ -1,32 +1,26 @@
 using UnityEngine;
-using TMPro; // Use this for TextMeshPro
+using TMPro;
 
-// Remove the line below if you are using TextMeshPro
-// using UnityEngine.UI; 
-
-[RequireComponent(typeof(TextMeshProUGUI))] // Change this to TextMeshProUGUI
+[RequireComponent(typeof(TextMeshProUGUI))] 
 public class LocalizedText : MonoBehaviour
 {
-    // The key to look for in the language file
     public string localizationKey;
 
-    private TextMeshProUGUI textComponent; // Change this to TextMeshProUGUI
+    private TextMeshProUGUI textComponent;
 
     void OnEnable()
     {
-        // Subscribe to the language changed event
         LocalizationManager.OnLanguageChanged += UpdateText;
     }
 
     void OnDisable()
     {
-        // Unsubscribe to prevent memory leaks
         LocalizationManager.OnLanguageChanged -= UpdateText;
     }
 
     void Start()
     {
-        textComponent = GetComponent<TextMeshProUGUI>(); // Change this to TextMeshProUGUI
+        textComponent = GetComponent<TextMeshProUGUI>();
         UpdateText();
     }
 

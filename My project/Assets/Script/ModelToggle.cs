@@ -1,12 +1,12 @@
 using UnityEngine;
-using UnityEngine.UI; // Jika Anda ingin ganti teks tombol
-using TMPro; // Jika Anda pakai TextMeshPro
+using UnityEngine.UI;
+using TMPro;
 
 public class ModelToggle : MonoBehaviour
 {
     public GameObject view2D;
     public GameObject view3D;
-    public TextMeshProUGUI buttonText; // Ganti ke Text jika pakai UI Text biasa
+    public TextMeshProUGUI buttonText;
 
     private bool is3DActive = false;
 

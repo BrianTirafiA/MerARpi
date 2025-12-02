@@ -16,7 +16,6 @@ public class ModelViewer : MonoBehaviour, IDragHandler, IPointerDownHandler, IPo
 
     void Update()
     {
-        // Handle Pinch-to-Zoom (Android)
         if (Input.touchCount == 2)
         {
             Touch touchZero = Input.GetTouch(0);
@@ -30,33 +29,26 @@ public class ModelViewer : MonoBehaviour, IDragHandler, IPointerDownHandler, IPo
 
             float difference = currentMagnitude - prevMagnitude;
 
-            Zoom(difference * 0.05f); // 0.05f adalah sensitivitas zoom
+            Zoom(difference * 0.05f); 
         }
 
-        // Handle Scroll-Wheel Zoom (Laptop/Editor)
         float scroll = Input.GetAxis("Mouse ScrollWheel");
-        // PERBAIKAN ZOOM LAPTOP DI SINI (10f, bukan -10f)
         Zoom(scroll * zoomSpeed * 10f);
     }
 
     void Zoom(float delta)
     {
         if (modelCamera == null) return;
-
-        // --- PERBAIKAN ZOOM UTAMA DI SINI (Tanda -) ---
         modelCamera.fieldOfView = Mathf.Clamp(modelCamera.fieldOfView - (delta * zoomSpeed), minZoomFov, maxZoomFov);
     }
 
     public void OnDrag(PointerEventData eventData)
     {
         if (modelTransform == null) return;
-
         modelTransform.Rotate(Vector3.up, -eventData.delta.x * rotationSpeed, Space.World);
-        // (Opsional) Rotasi Vertikal
         modelTransform.Rotate(Vector3.right, eventData.delta.y * rotationSpeed, Space.World);
     }
 
-    // Fungsi konflik ScrollRect (sudah benar, biarkan saja)
     public void OnPointerDown(PointerEventData eventData)
     {
         if (parentScrollRect != null)

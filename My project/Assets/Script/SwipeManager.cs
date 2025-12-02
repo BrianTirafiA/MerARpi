@@ -10,18 +10,12 @@ public class SwipeManager : MonoBehaviour
     float[] pos;
     float distance;
 
-    // --- PERUBAHAN DI SINI ---
     [Header("Audio Narasi")]
-    // 1. GANTI List<AudioClip> menjadi List<string>
-    // Ini akan menampung KUNCI LOKALISASI, bukan file audio
     public List<string> audioLocalizationKeys;
 
-    // 2. Referensi ke AudioSource (tetap sama)
     public AudioSource audioSource;
 
-    // 3. Index kartu aktif (tetap sama)
     private int currentCardIndex = 0;
-    // --- AKHIR PERUBAHAN ---
 
 
     void Start()
@@ -37,7 +31,6 @@ public class SwipeManager : MonoBehaviour
 
     void Update()
     {
-        // Logika swipe/scroll Anda tetap sama, tidak perlu diubah
         if (Input.GetMouseButton(0))
         {
             scroll_pos = scrollbar.GetComponent<Scrollbar>().value;
@@ -57,7 +50,6 @@ public class SwipeManager : MonoBehaviour
         {
             if (scroll_pos < pos[i] + (distance / 2) && scroll_pos > pos[i] - (distance / 2))
             {
-                // Saat kartu berubah, hentikan audio yang sedang diputar
                 if (currentCardIndex != i)
                 {
                     currentCardIndex = i;
@@ -80,12 +72,8 @@ public class SwipeManager : MonoBehaviour
         }
     }
 
-    // --- PERUBAHAN BESAR DI SINI ---
-    // Fungsi ini sekarang akan mencari nama file audio berdasarkan bahasa
-    // dan me-loadnya dari folder Resources.
     public void PlayCurrentAudio()
     {
-        // 1. Cek apakah semua sistem siap
         if (audioSource == null || LocalizationManager.instance == null || audioLocalizationKeys == null)
         {
             Debug.LogError("Setup belum lengkap! (AudioSource, LocalizationManager, atau Keys List hilang)");
@@ -97,10 +85,7 @@ public class SwipeManager : MonoBehaviour
             return;
         }
 
-        // 2. Dapatkan KUNCI lokalisasi untuk halaman saat ini
         string key = audioLocalizationKeys[currentCardIndex];
-
-        // 3. Dapatkan NAMA FILE dari LocalizationManager
         string clipName = LocalizationManager.instance.GetLocalizedValue(key);
 
         if (clipName == "KEY_NOT_FOUND")
@@ -109,32 +94,19 @@ public class SwipeManager : MonoBehaviour
             return;
         }
 
-        // --- INI BAGIAN YANG DIPERBARUI ---
-
-        // 4. Dapatkan KODE BAHASA saat ini (misal: "id" atau "en")
         string currentLanguageCode = LocalizationManager.instance.GetCurrentLanguage();
-
-        // 5. Gabungkan path lengkapnya
-        // Contoh path akan menjadi: "Audio/id/narasi_markerA_hal1_id"
         string fullPath = "Audio/" + currentLanguageCode + "/" + clipName;
-
-        // 6. Load AudioClip dari path yang baru
         AudioClip clipToPlay = Resources.Load<AudioClip>(fullPath);
 
-        // --- AKHIR BAGIAN YANG DIPERBARUI ---
-
-        // 7. Mainkan klip
         if (clipToPlay != null)
         {
-            audioSource.Stop(); // Hentikan klip sebelumnya
-            audioSource.clip = clipToPlay; // Set klip baru
-            audioSource.Play(); // Mainkan
+            audioSource.Stop(); 
+            audioSource.clip = clipToPlay;
+            audioSource.Play();
         }
         else
         {
-            // Pesan error ini sekarang lebih jelas
             Debug.LogError($"AudioClip GAGAL di-load. Cek path: 'Resources/{fullPath}'");
         }
     }
-    // --- AKHIR PERUBAHAN ---
 }

@@ -1,26 +1,16 @@
 using UnityEngine;
-using Vuforia; // Pastikan ini ada!
+using Vuforia;
 
 public class TargetManager : MonoBehaviour
 {
-    // 1. Beri nama unik untuk setiap marker di Inspector
     public string namaMarker;
-
-    // Referensi ke ManajerUI
     private ManagerInfoUI manajerUI;
-
-    // Referensi ke Observer Behaviour
     private ObserverBehaviour mObserverBehaviour;
-
-    // Variabel untuk melacak status, agar fungsi tidak dipanggil setiap frame
     private bool isTargetVisible = false;
 
     void Start()
     {
-        // Cari ManajerUI di scene Anda secara otomatis
         manajerUI = FindObjectOfType<ManagerInfoUI>();
-
-        // Dapatkan komponen ObserverBehaviour dari GameObject ini
         mObserverBehaviour = GetComponent<ObserverBehaviour>();
 
         if (manajerUI == null)
@@ -36,14 +26,9 @@ public class TargetManager : MonoBehaviour
     void Update()
     {
         if (mObserverBehaviour == null || manajerUI == null) return;
-
-        // Periksa status marker saat ini
         if (mObserverBehaviour.TargetStatus.Status == Status.TRACKED ||
             mObserverBehaviour.TargetStatus.Status == Status.EXTENDED_TRACKED)
         {
-            // --- MARKER DITEMUKAN ---
-
-            // Jika sebelumnya tidak terlihat, sekarang terlihat
             if (!isTargetVisible)
             {
                 isTargetVisible = true;
@@ -52,10 +37,6 @@ public class TargetManager : MonoBehaviour
         }
         else
         {
-            // --- MARKER HILANG ---
-            // (Status.NO_POSE, Status.LIMITED, dll)
-
-            // Jika sebelumnya terlihat, sekarang hilang
             if (isTargetVisible)
             {
                 isTargetVisible = false;

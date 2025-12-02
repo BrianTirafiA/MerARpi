@@ -129,6 +129,7 @@ GameObject:
   m_Component:
   - component: {fileID: 83895132}
   - component: {fileID: 83895131}
+  - component: {fileID: 83895133}
   m_Layer: 0
   m_Name: SceneController
   m_TagString: Untagged
@@ -149,7 +150,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Load1: CameraScene
-  Load2: CameraScene
+  Load2: 
   pageAnimator: {fileID: 2047430965}
   transitionTime: 2
 --- !u!4 &83895132
@@ -167,6 +168,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &83895133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 83895130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f5d06e88acafcb439d28b897e4a7a26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  url: https://tngmerapi.id/
 --- !u!1 &196994878
 GameObject:
   m_ObjectHideFlags: 0
@@ -196,7 +210,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1074000473}
   m_Father: {fileID: 1348658185}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
@@ -224,7 +239,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -953147433, guid: 8d190098a32f05c4d8b6c1796fa40a1f, type: 3}
+  m_Sprite: {fileID: 166866119, guid: 464ab0abe4232144f82491b59653a649, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1150,11 +1165,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1348658185}
+  m_Father: {fileID: 196994879}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -782.00055, y: 0}
+  m_AnchoredPosition: {x: 1099.9998, y: 0}
   m_SizeDelta: {x: 1000, y: 150}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!114 &1074000474
@@ -1177,7 +1192,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Scan Card
+  m_text: Website TNGM
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d224d67abd4f3d64eae661dd75f6e949, type: 2}
   m_sharedMaterial: {fileID: 7038965984587874835, guid: d224d67abd4f3d64eae661dd75f6e949, type: 2}
@@ -1268,7 +1283,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f591b0a4c6934040a52084d0d43ae4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  localizationKey: CardTitle
+  localizationKey: WebTitle
 --- !u!1 &1106690233
 GameObject:
   m_ObjectHideFlags: 0
@@ -1554,7 +1569,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 196994879}
-  - {fileID: 1074000473}
   - {fileID: 1832591236}
   m_Father: {fileID: 2066922019}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1897,7 +1911,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Scan Marker
+  m_text: Scan AR
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d224d67abd4f3d64eae661dd75f6e949, type: 2}
   m_sharedMaterial: {fileID: 7038965984587874835, guid: d224d67abd4f3d64eae661dd75f6e949, type: 2}
@@ -2343,9 +2357,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 83895131}
-        m_TargetAssemblyTypeName: ButtonLoader, Assembly-CSharp
-        m_MethodName: Load2Scene
+      - m_Target: {fileID: 83895133}
+        m_TargetAssemblyTypeName: WebButton, Assembly-CSharp
+        m_MethodName: OpenUrl
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

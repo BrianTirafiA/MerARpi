@@ -14,7 +14,6 @@ public class TimedLoader : MonoBehaviour
     IEnumerator LoadSceneAfterDelay()
     {
         yield return new WaitForSeconds(delayInSeconds);
-
         SceneManager.LoadScene(sceneToLoad);
     }
 }

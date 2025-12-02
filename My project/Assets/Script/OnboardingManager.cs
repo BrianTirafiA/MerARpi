@@ -8,21 +8,10 @@ public class OnboardingManager : MonoBehaviour
     public Animator PanelAnimator;
     public Button selanjutnyaButton;
     public Button mulaiSekarangButton;
-    //public Animator dotAnimator;
     private int currentPageIndex = 0;
 
     void Start()
     {
-/*        for (int i = 0; i < pages.Length; i++)
-        {
-            pages[i].SetActive(false);
-        }
-
-        if (pages.Length > 0)
-        {
-            pages[0].SetActive(true);
-        }*/
-
         selanjutnyaButton.gameObject.SetActive(true);
         mulaiSekarangButton.gameObject.SetActive(false);
         selanjutnyaButton.onClick.AddListener(GoToNextPage);
@@ -30,12 +19,10 @@ public class OnboardingManager : MonoBehaviour
 
     public void GoToNextPage()
     {
-        //pages[currentPageIndex].SetActive(false);
         currentPageIndex++;
 
         if (currentPageIndex < pages.Length)
         {
-            //pages[currentPageIndex].SetActive(true);
             pageAnimator.SetTrigger("Next");
             PanelAnimator.SetTrigger("Next");
         }
